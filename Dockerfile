@@ -6,5 +6,7 @@ COPY ./ /app
 
 RUN pip install -r requirements.txt --no-cache-dir
 
-ENTRYPOINT ["streamlit", "run", "app.py"]
+EXPOSE 8080
+
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8080"]
 
